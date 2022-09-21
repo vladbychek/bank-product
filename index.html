@@ -9,17 +9,18 @@
 <body>
    <div class="all">
       <div class="bank">
-         <input class="bank__val1" type='text' placeholder="Name"></input>
-         <input class="bank__val2" type='number' placeholder="Percent"></input>
-         <input class="bank__val3" type='number' placeholder="Сapitalization term (years)"></input>
-         <button class='bank__btn'>Send to user</button>
+         <input class="bank__name" type='text' placeholder="Name"></input>
+         <input class="bank__percent" type='number' placeholder="Percent"></input>
+         <input class="bank__cap_term" type='number' placeholder="Сapitalization term (years)"></input>
+         <button disabled class='bank__send-to-user'>Send to user</button>
       </div>
       <div class="user">
-         <select class="user__select" id="user__product"></select>
-         <input class="user__val2" type='number' placeholder="Amount"></input>
-         <input class="user__val3" type='number' placeholder="Period"></input>
-         <button class='user__btn'>Get result</button>
+         <select class="user__select-name" id="user__product"></select>
+         <input class="user__amount" required type='number' placeholder="Amount"></input>
+         <input class="user__period" required type='number' placeholder="Period"></input>
+         <button disabled class='user__get-result'>Get result</button>
       </div>
+      <button class="clear-btn">Clear</button>
       <div id="show" class="show"></div>
       <script src="task.js"></script>
    </div>
