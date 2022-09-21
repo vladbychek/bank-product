@@ -8,6 +8,7 @@ class Product {
     }
 }
 
+
 function bankValues() {
     let newProduct = new Product (
         document.querySelector('.bank__val1').value,
@@ -36,17 +37,14 @@ function formula() {
     let userValue = userValues()
     for(let i = 0; i < productOfBank.length; i++) {
         let bankValue = Object.values(productOfBank[i])
-        for(let i = 0; i < bankValue.length; i++){
-            if(userValue[0] === bankValue[i] ){
+            if(userValue[0] === bankValue[0] ){
                 let result = userValue[1] * (1 + bankValue[1] / 100 / userValue[2]) ** (bankValue[2])
-                finalResult('Amount:' + ' '+ userValue[1] +' ' + '<br></br> Result:' + ' ' + result)
+                addResult(`User: ${userValue[0]}<br></br>Amount:${userValue[1]}<br></br>Result:${result}`)
             }
-            break;
-        } 
     }
 }
 
-function finalResult(formula) {
+function addResult(formula) {
     let cash = document.createElement('div');
     cash.className = 'cash';
     cash.innerHTML = String(formula);
