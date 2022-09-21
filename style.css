@@ -44,7 +44,5 @@ input{
    width: 209px;
 }
 .clear-btn{
-   position: absolute;
-   left: 52.8%;
-   top: 16%;
+   margin: 0 a;
 }
