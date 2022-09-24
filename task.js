@@ -48,13 +48,6 @@ function addResult(formula) {
     cash.innerHTML = String(formula)
 }
 
-function clear() {
-    let inputs = document.querySelectorAll('input')
-    for( i = 0; i < inputs.length; i++){
-        inputs[i].value = ''
-    }
-}
-
 function removeEl() {
     let elementToRemove = document.querySelector('.cash')
     elementToRemove.remove()
@@ -63,7 +56,6 @@ function removeEl() {
 document.querySelector('.delete-btn').addEventListener('click', removeEl)
 document.querySelector('.bank__send-to-user').addEventListener('click', addProduct)
 document.querySelector('.user__get-result').addEventListener('click', formula)
-document.querySelector('.clear-btn').addEventListener('click', clear)
 
 const bank__name = document.querySelector('.bank__name');
 const bank__percent = document.querySelector('.bank__percent');
