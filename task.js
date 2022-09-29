@@ -35,7 +35,7 @@ function formula() {
     for(i = 0; i < productOfBank.length; i++) {
         let bankValue = productOfBank[i]
         if(userValue.name === bankValue.name ){
-            let result = userValue.amount * (1 + bankValue.percent / 100 / userValue.period) ** (bankValue.timeOfCap)
+            let result = (userValue.amount * (1 + (bankValue.percent / 100) / (12 / bankValue.timeOfCap)) ** (userValue.period / bankValue.timeOfCap))
             addResult(`User: ${userValue.name}<br></br>Amount: ${userValue.amount}<br></br>Result: ${result}`)
         }   
     }
